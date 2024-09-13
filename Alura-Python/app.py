@@ -3,7 +3,9 @@
 import os
 
 
-restaurantes = ['teste1', 'teste2']
+restaurantes = [{'nome':'praca', 'caregoria':'japonesa', 'ativo':False}, 
+                {'nome':'Pizza Suprema', 'categoria':'Italiana', 'ativo':True},
+                {'nome':'Sushi', 'categoria':'Japonês', 'ativo':False}]
 
 def nome_programa():
       print("""Sabor Express
@@ -46,7 +48,8 @@ def listar_restaurantes():
       exibir_subtitulo('Listar restaurantes')
 
       for lista in restaurantes:
-            print(f'.{lista}\n')
+            nome_restaurante = lista['nome']
+            print(f'- {nome_restaurante}\n')
 
       voltar_menu_principal()
 
