@@ -3,7 +3,7 @@
 import os
 
 
-restaurantes = [{'nome':'praca', 'caregoria':'japonesa', 'ativo':False}, 
+restaurantes = [{'nome':'praca', 'categoria':'japonesa', 'ativo':False}, 
                 {'nome':'Pizza Suprema', 'categoria':'Italiana', 'ativo':True},
                 {'nome':'Sushi', 'categoria':'Japonês', 'ativo':False}]
 
@@ -47,9 +47,11 @@ def finalizar_app():
 def listar_restaurantes():
       exibir_subtitulo('Listar restaurantes')
 
-      for lista in restaurantes:
-            nome_restaurante = lista['nome']
-            print(f'- {nome_restaurante}\n')
+      for restaurante in restaurantes:
+            nome_restaurante = restaurante['nome']
+            categoria = restaurante['categoria']
+            ativo = restaurante['ativo']
+            print(f'- {nome_restaurante} | {categoria} | {ativo}')
 
       voltar_menu_principal()
 
