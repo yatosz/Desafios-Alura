@@ -60,9 +60,29 @@ def calcular_soma_elementos():
 
     print(f'Calculo total: {total_soma}')
 
+def calcular_media_lista():
+    print('\n###---Calculo Media Lista---###\n')
+    lista_numeros = [10, 15, 30, 45]
+
+    soma_total = 0
+    try:
+        for numero in lista_numeros:
+            print(f'valores: {numero}')
+            soma_total += numero 
+
+        media = (soma_total / len(lista_numeros))
+        print(f'\nmédia dos valores: {media} \n')
+
+    except ZeroDivisionError:
+        print("Erro: Não é possível divisão por zero!")
+
+    except Exception  as e:
+        print(f'Erro: ocorreu um erro inesperado! {e}')
+
 if __name__ == "__main__":
     listar_numeros()
     listar_nomes()
     listar_anos()
     loop_tabuada()
     calcular_soma_elementos()
+    calcular_media_lista()
