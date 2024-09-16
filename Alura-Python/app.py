@@ -30,9 +30,12 @@ def opcao_invalida():
       voltar_menu_principal()
 
 def exibir_subtitulo(texto):
-      #os.system("cls") windows
+      #os.system("cls") windows     
       os.system('clear') # mac / linux
+      linha = '-' * (len(texto) + 2)
+      print(linha)
       print(texto)
+      print(linha)
       print()
 
 def cadastrar_novo_restaurante():
@@ -52,11 +55,13 @@ def finalizar_app():
 def listar_restaurantes():
       exibir_subtitulo("Listar restaurantes")
 
+      print(f"{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status")
       for restaurante in restaurantes:
             nome_restaurante = restaurante['nome']
             categoria = restaurante['categoria']
             ativo = 'ativado' if restaurante['ativo'] else 'desativado'
-            print(f'- {nome_restaurante} | {categoria} | {ativo}')
+            #ljust | adiciona espaçamentos
+            print(f'- {nome_restaurante.ljust(20)} | {categoria.ljust(20)} | {ativo}')
 
       voltar_menu_principal()
 
