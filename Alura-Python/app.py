@@ -59,11 +59,14 @@ def cadastrar_novo_restaurante():
       voltar_menu_principal()
 
 def finalizar_app():
+    '''Exibe mensagem de finalização do aplicativo!'''
     exibir_subtitulo("Finalizando o app...\n")
 
 def listar_restaurantes():
+      '''exibe o subtitulo.'''
       exibir_subtitulo("Listar restaurantes")
 
+      '''Lista os nomes dos restaurantes na tela'''
       print(f"{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status")
       for restaurante in restaurantes:
             nome_restaurante = restaurante['nome']
@@ -75,6 +78,11 @@ def listar_restaurantes():
       voltar_menu_principal()
 
 def alternar_estado_restaurante():
+      '''alterna entre estado do restaurante, entre ativado ou desativado
+      
+      Outputs:
+      Exibe mensagem de sucesso da operação'''
+      
       exibir_subtitulo("Alternando estado do restaurante")
 
       nome_restaurante = input("Digite o nome do restaurante que deseja alterar o estado: ")
@@ -97,6 +105,10 @@ def alternar_estado_restaurante():
 
 
 def escolhe_opcao():
+      '''Solicita a opção para o usuário
+      
+      Outputs:
+      Executa a opção escolhida pelo usuário'''
       try:
             escolha_opcao = int(input("Escolha uma opção: "))
             #  escolha_opcao = int(escolha_opcao)
@@ -122,10 +134,12 @@ def escolhe_opcao():
              opcao_invalida()
 
 def main():
+    '''Função inicial que inicia o programa'''
     os.system('clear')
     nome_programa()
     mostra_opcoes()
     escolhe_opcao()
 
 if __name__ == "__main__":
+    '''Main que chama a função/rotina Main'''
     main()
