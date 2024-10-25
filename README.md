@@ -1,4 +1,4 @@
 # Desafios-Alura
 
 - Python
-- avaScript
+- JavaScript
